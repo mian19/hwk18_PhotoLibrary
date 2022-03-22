@@ -13,6 +13,7 @@
 		6728098D27E9AE490002A18A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6728098B27E9AE490002A18A /* Main.storyboard */; };
 		6728098F27E9AE4A0002A18A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6728098E27E9AE4A0002A18A /* Assets.xcassets */; };
 		6728099227E9AE4A0002A18A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6728099027E9AE4A0002A18A /* LaunchScreen.storyboard */; };
+		672809BE27EA568F0002A18A /* UIButton+customButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672809BD27EA568F0002A18A /* UIButton+customButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6728098E27E9AE4A0002A18A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6728099127E9AE4A0002A18A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6728099327E9AE4A0002A18A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		672809BD27EA568F0002A18A /* UIButton+customButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+customButton.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				6728098527E9AE490002A18A /* AppDelegate.swift */,
 				6728098727E9AE490002A18A /* SceneDelegate.swift */,
 				6728098927E9AE490002A18A /* ViewController.swift */,
+				672809BD27EA568F0002A18A /* UIButton+customButton.swift */,
 				6728098B27E9AE490002A18A /* Main.storyboard */,
 				6728098E27E9AE4A0002A18A /* Assets.xcassets */,
 				6728099027E9AE4A0002A18A /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				6728098A27E9AE490002A18A /* ViewController.swift in Sources */,
 				6728098627E9AE490002A18A /* AppDelegate.swift in Sources */,
+				672809BE27EA568F0002A18A /* UIButton+customButton.swift in Sources */,
 				6728098827E9AE490002A18A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
