@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     
     private var addPhotoButton: UIButton!
     private var showPhotoButton: UIButton!
+    private var secretPasswordView: UIView!
+    private var blurEffectView: UIVisualEffectView!
     private var dictionaryOfSecretImages: [URL : UIImage] = [:]
     
     override func loadView() {
@@ -32,6 +34,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addPhotoButton.addTarget(self, action: #selector(onAddPhotoButton), for: .touchUpInside)
+        showPhotoButton.addTarget(self, action: #selector(onShowPhotoButton), for: .touchUpInside)
     }
     
     private func setButtonsOnScreen() {
@@ -53,6 +56,23 @@ class ViewController: UIViewController {
         imageController.sourceType = .photoLibrary
         imageController.delegate = self
         present(imageController, animated: true, completion: nil)
+    }
+    
+    @objc func onShowPhotoButton() {
+        let blurEffect = UIBlurEffect(style: .light)
+        blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        view.addSubview(blurEffectView)
+        secretPasswordView = UIView.viewForPassword()
+        view.addSubview(secretPasswordView)
+        secretPasswordView.center = view.center
+        let tapOnBlur = UITapGestureRecognizer(target: self, action: #selector(onBlurEffectView))
+        blurEffectView.addGestureRecognizer(tapOnBlur)
+    }
+    
+    @objc func onBlurEffectView() {
+        blurEffectView.removeFromSuperview()
+        secretPasswordView.removeFromSuperview()
     }
 }
 
