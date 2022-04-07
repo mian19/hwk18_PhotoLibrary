@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		671A386627ED05E300ED9653 /* UIAlertController+customAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A386527ED05E300ED9653 /* UIAlertController+customAlert.swift */; };
 		6728098627E9AE490002A18A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728098527E9AE490002A18A /* AppDelegate.swift */; };
 		6728098827E9AE490002A18A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728098727E9AE490002A18A /* SceneDelegate.swift */; };
 		6728098A27E9AE490002A18A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6728098927E9AE490002A18A /* ViewController.swift */; };
 		6728098D27E9AE490002A18A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6728098B27E9AE490002A18A /* Main.storyboard */; };
 		6728098F27E9AE4A0002A18A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6728098E27E9AE4A0002A18A /* Assets.xcassets */; };
 		6728099227E9AE4A0002A18A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6728099027E9AE4A0002A18A /* LaunchScreen.storyboard */; };
+		672809BE27EA568F0002A18A /* UIButton+customButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672809BD27EA568F0002A18A /* UIButton+customButton.swift */; };
+		678CDA9B27FE04A6002F1F43 /* UIView+customView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678CDA9A27FE04A6002F1F43 /* UIView+customView.swift */; };
+		67ACE7ED27FF058000D4B568 /* photoCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67ACE7EC27FF058000D4B568 /* photoCollectionVC.swift */; };
+		67ACE7EF27FF059500D4B568 /* photoCollectionVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67ACE7EE27FF059500D4B568 /* photoCollectionVC.storyboard */; };
+		67ACE7F227FF247C00D4B568 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67ACE7F127FF247C00D4B568 /* PhotoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		671A386527ED05E300ED9653 /* UIAlertController+customAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+customAlert.swift"; sourceTree = "<group>"; };
 		6728098227E9AE490002A18A /* hwk18_PhotoLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hwk18_PhotoLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6728098527E9AE490002A18A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6728098727E9AE490002A18A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,11 @@
 		6728098E27E9AE4A0002A18A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6728099127E9AE4A0002A18A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6728099327E9AE4A0002A18A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		672809BD27EA568F0002A18A /* UIButton+customButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+customButton.swift"; sourceTree = "<group>"; };
+		678CDA9A27FE04A6002F1F43 /* UIView+customView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+customView.swift"; sourceTree = "<group>"; };
+		67ACE7EC27FF058000D4B568 /* photoCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoCollectionVC.swift; sourceTree = "<group>"; };
+		67ACE7EE27FF059500D4B568 /* photoCollectionVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = photoCollectionVC.storyboard; sourceTree = "<group>"; };
+		67ACE7F127FF247C00D4B568 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,10 @@
 			children = (
 				6728098527E9AE490002A18A /* AppDelegate.swift */,
 				6728098727E9AE490002A18A /* SceneDelegate.swift */,
+				671A386527ED05E300ED9653 /* UIAlertController+customAlert.swift */,
+				67ACE7F027FF05A400D4B568 /* photoCollectionVC */,
+				672809BD27EA568F0002A18A /* UIButton+customButton.swift */,
+				678CDA9A27FE04A6002F1F43 /* UIView+customView.swift */,
 				6728098927E9AE490002A18A /* ViewController.swift */,
 				6728098B27E9AE490002A18A /* Main.storyboard */,
 				6728098E27E9AE4A0002A18A /* Assets.xcassets */,
@@ -65,6 +81,16 @@
 				6728099327E9AE4A0002A18A /* Info.plist */,
 			);
 			path = hwk18_PhotoLibrary;
+			sourceTree = "<group>";
+		};
+		67ACE7F027FF05A400D4B568 /* photoCollectionVC */ = {
+			isa = PBXGroup;
+			children = (
+				67ACE7EC27FF058000D4B568 /* photoCollectionVC.swift */,
+				67ACE7EE27FF059500D4B568 /* photoCollectionVC.storyboard */,
+				67ACE7F127FF247C00D4B568 /* PhotoCollectionViewCell.swift */,
+			);
+			path = photoCollectionVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +153,7 @@
 			files = (
 				6728099227E9AE4A0002A18A /* LaunchScreen.storyboard in Resources */,
 				6728098F27E9AE4A0002A18A /* Assets.xcassets in Resources */,
+				67ACE7EF27FF059500D4B568 /* photoCollectionVC.storyboard in Resources */,
 				6728098D27E9AE490002A18A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,7 +166,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6728098A27E9AE490002A18A /* ViewController.swift in Sources */,
+				67ACE7F227FF247C00D4B568 /* PhotoCollectionViewCell.swift in Sources */,
 				6728098627E9AE490002A18A /* AppDelegate.swift in Sources */,
+				678CDA9B27FE04A6002F1F43 /* UIView+customView.swift in Sources */,
+				672809BE27EA568F0002A18A /* UIButton+customButton.swift in Sources */,
+				67ACE7ED27FF058000D4B568 /* photoCollectionVC.swift in Sources */,
+				671A386627ED05E300ED9653 /* UIAlertController+customAlert.swift in Sources */,
 				6728098827E9AE490002A18A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +328,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +356,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
