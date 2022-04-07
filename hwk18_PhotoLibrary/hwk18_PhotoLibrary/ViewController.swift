@@ -102,7 +102,6 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         String(arrForPicker[row])
-      
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
@@ -110,7 +109,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         if row == pickerView.selectedRow(inComponent: component) {
             color = .green
         }
-      return  NSAttributedString(string: String(arrForPicker[row]), attributes: [.foregroundColor : color])
+        return  NSAttributedString(string: String(arrForPicker[row]), attributes: [.foregroundColor : color])
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -127,9 +126,6 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         viewCollectionVC.setPhotoArray(photos: Array(dictionaryOfSecretImages.values))
         self.present(viewCollectionVC, animated: true)
     }
-    
-    
-        
     
 }
 

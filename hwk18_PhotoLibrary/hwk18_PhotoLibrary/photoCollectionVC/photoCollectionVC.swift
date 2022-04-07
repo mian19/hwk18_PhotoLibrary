@@ -14,7 +14,7 @@ class photoCollectionVC: UIViewController{
     private var collectionView: UICollectionView!
     private var imageView: UIImageView!
     private var layoutForCollectionView: UICollectionViewFlowLayout!
-
+    
     override func loadView() {
         super.loadView()
         layoutSettings()
@@ -29,21 +29,16 @@ class photoCollectionVC: UIViewController{
         imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = .systemYellow
-       
-        
         
         view.addSubview(collectionView)
         view.addSubview(imageView)
-
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         setElements()
     }
-
-    
     
     private func layoutSettings() {
         layoutForCollectionView = UICollectionViewFlowLayout()
@@ -54,7 +49,6 @@ class photoCollectionVC: UIViewController{
     
     private func setElements() {
         NSLayoutConstraint.activate([
-            
             imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             imageView.widthAnchor.constraint(equalTo: view.widthAnchor),
             imageView.heightAnchor.constraint(equalToConstant: view.bounds.height * 0.65),
@@ -63,14 +57,12 @@ class photoCollectionVC: UIViewController{
             view.bottomAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 50),
             collectionView.widthAnchor.constraint(equalTo: view.widthAnchor),
             collectionView.heightAnchor.constraint(equalToConstant: view.bounds.height * 0.2)
-        
         ])
     }
     
     func setPhotoArray(photos: [UIImage]?) {
         secretImages = photos
     }
-    
 }
 
 extension photoCollectionVC: UICollectionViewDelegate& UICollectionViewDataSource {
@@ -78,7 +70,7 @@ extension photoCollectionVC: UICollectionViewDelegate& UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return secretImages?.count ?? 0
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.reuseID, for: indexPath) as! PhotoCollectionViewCell
         
