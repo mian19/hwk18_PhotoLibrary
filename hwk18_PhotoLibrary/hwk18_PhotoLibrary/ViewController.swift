@@ -5,11 +5,6 @@
 //  Created by Kyzu on 22.03.22.
 //
 
-//Библиотека хранения фото с паролем. Для начала на первом экране сделать
-//2 кнопки, добавить фото и просмотр всех фото. По добавлению фото,
-//отображать imagePickerController и добавлять фото в массив. Отображение
-//фото выполняться будет чуть позже, будет использоваться UICollectionView
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -18,6 +13,7 @@ class ViewController: UIViewController {
     private var showPhotoButton: UIButton!
     private var secretPasswordView: UIView!
     private var blurEffectView: UIVisualEffectView!
+    private var arrForPicker = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     private var dictionaryOfSecretImages: [URL : UIImage] = [:]
     
     override func loadView() {
@@ -59,11 +55,12 @@ class ViewController: UIViewController {
     }
     
     @objc func onShowPhotoButton() {
-        let blurEffect = UIBlurEffect(style: .light)
+        let blurEffect = UIBlurEffect(style: .systemUltraThinMaterialDark)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         view.addSubview(blurEffectView)
-        secretPasswordView = UIView.viewForPassword()
+        secretPasswordView = UIView.viewForPassword(pickerDelegate: self)
+        
         view.addSubview(secretPasswordView)
         secretPasswordView.center = view.center
         let tapOnBlur = UITapGestureRecognizer(target: self, action: #selector(onBlurEffectView))
@@ -92,5 +89,47 @@ extension ViewController: UIImagePickerControllerDelegate & UINavigationControll
             dictionaryOfSecretImages[imageURL] = image
         }
     }
+}
+
+extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        3
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        arrForPicker.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        String(arrForPicker[row])
+      
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        var color = UIColor.white
+        if row == pickerView.selectedRow(inComponent: component) {
+            color = .green
+        }
+      return  NSAttributedString(string: String(arrForPicker[row]), attributes: [.foregroundColor : color])
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        pickerView.reloadAllComponents()
+        if pickerView.selectedRow(inComponent: 0) == 1 && pickerView.selectedRow(inComponent: 1) == 2 && pickerView.selectedRow(inComponent: 2) == 3 {
+            openPhotoView()
+            onBlurEffectView()
+        }
+    }
+    
+    private func openPhotoView() {
+        let storyboard = UIStoryboard(name: "photoCollectionVC", bundle: Bundle.main)
+        let viewCollectionVC = storyboard.instantiateInitialViewController() as! photoCollectionVC
+        viewCollectionVC.setPhotoArray(photos: Array(dictionaryOfSecretImages.values))
+        self.present(viewCollectionVC, animated: true)
+    }
+    
+    
+        
+    
 }
 
