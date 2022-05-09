@@ -1,0 +1,6 @@
+framework module Pods_hwk18_PhotoLibrary {
+  umbrella header "Pods-hwk18_PhotoLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}

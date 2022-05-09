@@ -121,8 +121,8 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     private func openPhotoView() {
-        let storyboard = UIStoryboard(name: "photoCollectionVC", bundle: Bundle.main)
-        let viewCollectionVC = storyboard.instantiateInitialViewController() as! photoCollectionVC
+        let storyboard = UIStoryboard(name: "PhotoCollectionViewController", bundle: Bundle.main)
+        let viewCollectionVC = storyboard.instantiateInitialViewController() as! PhotoCollectionViewController
         viewCollectionVC.setPhotoArray(photos: Array(dictionaryOfSecretImages.values))
         self.present(viewCollectionVC, animated: true)
     }

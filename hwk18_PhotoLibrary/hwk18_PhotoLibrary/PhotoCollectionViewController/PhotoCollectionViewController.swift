@@ -8,15 +8,21 @@
 import Foundation
 import UIKit
 
-class photoCollectionVC: UIViewController{
+class PhotoCollectionViewController: UIViewController {
     
     private var secretImages: [UIImage]?
     private var collectionView: UICollectionView!
     private var imageView: UIImageView!
     private var layoutForCollectionView: UICollectionViewFlowLayout!
     
-    override func loadView() {
-        super.loadView()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        collectionSettings()
+        imageSettings()
+        setElements()
+    }
+    
+    private func collectionSettings() {
         layoutSettings()
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layoutForCollectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -26,18 +32,14 @@ class photoCollectionVC: UIViewController{
         collectionView.delegate = self
         
         collectionView.register(PhotoCollectionViewCell.self, forCellWithReuseIdentifier: PhotoCollectionViewCell.reuseID)
+        view.addSubview(collectionView)
+    }
+    private func imageSettings() {
         imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = .systemYellow
         
-        view.addSubview(collectionView)
         view.addSubview(imageView)
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setElements()
     }
     
     private func layoutSettings() {
@@ -65,7 +67,7 @@ class photoCollectionVC: UIViewController{
     }
 }
 
-extension photoCollectionVC: UICollectionViewDelegate& UICollectionViewDataSource {
+extension PhotoCollectionViewController: UICollectionViewDelegate& UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return secretImages?.count ?? 0
